@@ -5,8 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h3,h1{
+            text-align: center;
+        }
+        ul li{
+            font-size: larger;
+            margin-left: 60px;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-    
+    {% block content %}
+        <h1>{{ activity | title }}</h1>
+        <ul>
+            {% for venue in places %}
+            <li>
+                <a href="{% url 'venue' borough activity venue %} ">
+                    {{ venue|title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endblock %}
 </body>
 </html>
