@@ -1,17 +1,16 @@
 from django.shortcuts import render
 from .boroughs import boroughs
-import datetime
 
 def home(request):
     return render(request, 'base.html', context={ 'boroughs': boroughs.keys() })
     
 def city(request):
     if request.method == 'GET':
-        return render(request=request, template_name='city.html', context={ 'boroughs': boroughs.keys() })
+        return render(request=request, template_name='city.html', context={'boroughs': boroughs.keys()})
 
 def borough(request, borough):
     if request.method == 'GET':
-        return render(request=request, template_name='borough.html', context={ 'borough': borough, 'activities': boroughs[borough].keys() })
+        return render(request=request, template_name='borough.html', context={'borough': borough, 'activities': boroughs[borough].keys()})
 
 # Create your views here.
 def activity(request, borough, activity):
