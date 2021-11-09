@@ -1,0 +1,60 @@
+{% extends 'activity.html' %}
+{% block peek %}
+{% load static %}
+<div class="card-group">
+    <div class="card">
+        <img class="card-img-top" src="{{ places[0].img_link }}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{ places[0] | title }}</h5>
+        <p class="card-text">{{ places[0].description }}</p>
+        </div>
+    </div>
+    {% if places[1] %}
+    <div class="card">
+        <img class="card-img-top" src="{{ places[1].img_link }}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{ places[1] | title }}</h5>
+        <p class="card-text">{{ places[1].description }}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% if places[2] %}
+    <div class="card">
+        <img class="card-img-top" src="{{ places[2].img_link }}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{ places[2] | title }}</h5>
+        <p class="card-text">{{ places[2].description }}</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+<div></div>
+<div class="card-group">
+    {% if places[3] %}
+    <div class="card">
+        <img class="card-img-top" src="{{ places[3].img_link }}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{ places[3] | title }}</h5>
+        <p class="card-text">{{ places[3].description }}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% if places[5] %}
+    <div class="card">
+        <img class="card-img-top" src="{{ places[5].img_link }}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{ places[5] | title }}</h5>
+        <p class="card-text">{{ places[5].description }}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% if places[6] %}
+    <div class="card">
+        <img class="card-img-top" src="{{ places[6].img_link }}" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{ places[6] | title }}</h5>
+        <p class="card-text">{{ places[6].description }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
