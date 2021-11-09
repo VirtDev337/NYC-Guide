@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HomePage</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-brand" href="{% url 'city' %}">Home</a></li>
+                    <li><a class="navbar-link" href="{% url 'about' %}">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <center>
+            <div class="container">
+                {% block content %}
+                <h1>New York City Guide</h1>
+                <h3>
+                    Wondering about fun activities to do in the big city? 
+                    <br>Check out this
+                    directory of activities in each borough!
+                </h3>
+
+                <ul>
+                    {% for borough in boroughs %}
+                    <li>
+                        <a href="{% url 'borough' borough %}">
+                        {{ borough|title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endblock %}
+            </div>
+        </center>        
+    </body>
+</html>

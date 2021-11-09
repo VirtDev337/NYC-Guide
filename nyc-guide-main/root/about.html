@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <h1>This is about the developers of this webpage</h1>
+    <h4>Authors:</h4>
+    <ul>
+        <li><a href=https://github.com/RakeshPerani>Rakesh Perani</a></li>
+        <li><a href=https://github.com/VirtDev337>Lee Harvey</a></li>
+    </ul>
+    <h2>Django is the best framework</h2>
+    <h1>DataFlair Team</h1>
+    <h2>Year : {{ time | date:'Y' }}</h2>
+    <h2>Month : {{ time | date:'M' }}</h2>
+    <a href="{% url 'city' %}">Home</a>
+{% endblock %}
+
+

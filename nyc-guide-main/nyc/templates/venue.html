@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        img{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: fit-content;
-        }
-        h3,h1{
-            text-align: center;
-        }
-        ul li{
-            font-size: larger;
-            margin-left: 60px;
-            margin-right: auto;
-        }
-    </style>
-</head>
-<body>
-    {% block content %}
-        <h1>{{ place | title }}</h1> 
-        <img style="display: block" src="{{ venue.img_link }}" height="400" />    
-        <p>{{ venue.description }}</p>
-    {% endblock %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<center>
+    <h1>{{ place | title }}</h1>
+    
+    <div class="card" style="float: inline-flex;">
+        <img style="display: block" src="{{ venue.img_link }}" height="400" />
+        <div class="card-body">
+            <h3 class="card-title">{{ place | title }}</h3>
+            <p class="card-text">{{ venue.description }}</p>
+        </div>
+    </div>
+    <a href="{% url 'city' %}">Home</a><br>
+    <div></div>
+</center>
+{% endblock %}
