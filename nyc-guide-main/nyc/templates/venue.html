@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ venue | title }}</title>
+    <title>Document</title>
+    <style>
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+        h3,h1{
+            text-align: center;
+        }
+        ul li{
+            font-size: larger;
+            margin-left: 60px;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>{{ venue | title }}</h1> 
-
-    <ul>
-        {% for venue in venues %}
-        <li>
-            <a href="{% url 'venue' borough activity venue %} "
-                >{{ venue|title }}</a
-            >
-        </li>
-        {% endfor %}
-    </ul>
+    {% block content %}
+        <h1>{{ place | title }}</h1> 
+        <img style="display: block" src="{{ venue.img_link }}" height="400" />    
+        <p>{{ venue.description }}</p>
+    {% endblock %}
 </body>
 </html>
