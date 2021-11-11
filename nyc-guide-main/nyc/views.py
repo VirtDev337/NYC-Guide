@@ -16,6 +16,7 @@ def activity(request, borough, activity):
         places = boroughs[borough][activity].keys()
         for itm in places:
             cards[itm] = boroughs[borough][activity][itm]['image']
+        print(cards)
         return render(request = request, template_name = 'activity.html', context = { 'borough': borough, 'activity': activity, 'places' : boroughs[borough][activity].keys(), 'cards' : cards })
 
 def venue(request, borough, activity, venue):
