@@ -1,10 +1,7 @@
 from django.shortcuts import render
 from .boroughs import boroughs
-import datetime
 
-def home(request):
-    return render(request, 'base.html', context = { 'boroughs': boroughs.keys() })
-    
+# Home Screen
 def city(request):
     if request.method == 'GET':
         return render(request=request, template_name = 'city.html', context = { 'boroughs': boroughs.keys() })
@@ -13,13 +10,12 @@ def borough(request, borough):
     if request.method == 'GET':
         return render(request = request, template_name = 'borough.html', context = { 'borough': borough, 'activities': boroughs[borough].keys() })
 
-# Create your views here.
 def activity(request, borough, activity):
     if request.method == 'GET':
         cards = {}
-        k = boroughs[borough][activity].keys()
-        for itm in k:
-            cards[itm] = boroughs[borough][activity][itm]
+        places = boroughs[borough][activity].keys()
+        for itm in places:
+            cards[itm] = boroughs[borough][activity][itm]['image']
         return render(request = request, template_name = 'activity.html', context = { 'borough': borough, 'activity': activity, 'places' : boroughs[borough][activity].keys(), 'cards' : cards })
 
 def venue(request, borough, activity, venue):

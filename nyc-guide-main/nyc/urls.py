@@ -5,8 +5,7 @@ from nyc import views
 
 urlpatterns = [
     # all the urls are for free
-    path('', views.home, name = 'home'),
-    path('city', views.city, name = 'city'),
+    path('', views.city, name = 'city'),
     path('about', views.about, name = 'about'),
     path('<str:borough>', views.borough, name = 'borough'),
     path('<str:borough>/<str:activity>', views.activity, name = 'activity'),
