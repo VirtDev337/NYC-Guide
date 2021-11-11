@@ -1,0 +1,27 @@
+<ul>
+    {% for place in places %}
+        <li>
+            <a href="{% url 'venue' borough activity place %} ">
+                {{ place|title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<!-- old for loop for activity.html -->
+
+<!-- Attempt of cards -->
+<div class="card-deck">
+    <ul>
+        {% for place in places %}
+        <div class="card">
+            <img class="card-img-top" src="{{ place.img_link }}">
+            <div class="card-body">
+            <h5 class="card-title">{{ place | title }}</h5>
+            <p class="card-text">{{ place.description }}</p>
+            <a href="{% url 'venue' borough activity place %}" class="btn btn-primary">{{ place | title }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </ul>
+</div>
