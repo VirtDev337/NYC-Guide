@@ -26,7 +26,7 @@ New York City Guide is a travel website built within Django, a Python web framew
   Git Hub: https://github.com/RakeshPerani
 
 ***
-## Installation/Technology Requirements
+## <div align="center">Installation/Technology Requirements</div>
 New York City Guide requires [Python](https://www.python.org/) v3.9+  and [Django](https://www.djangoproject.com/) to run.
 ***
 
@@ -65,12 +65,12 @@ pip install django
 python manage.py runserver (and follow/click on the link: http://127.0.0.1:8000/)
 ```
 ***
-### Bonus Features
+## <div align="center">Bonus Features</div>
 #### Bootstrap Cards:
 The Bootstrap toolkit, a free and open-source CSS framework, was utilized for front-end development of cards to display a picture of each activity and venue.
 
 ***
-### Contributing
+## <div align="center">Contributing</div>
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. 
 All changes will be considered but may not be integrated.
 
