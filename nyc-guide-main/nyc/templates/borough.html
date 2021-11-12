@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
     <h1>{{ borough | title }}</h1>
-    
-    {% for activity in activities %}
-        <a href="{% url 'activity' borough activity %} ">
+    <div class="container-fluid">
+        <div class="row">
+            {% for activity in activities %}
+                <div class="col-md">
+                    <div class="card" style="width: 18rem; margin: 10px;">
+                        <img class="card-img-top" src="/static/images/{{ categories|keyvalue:activity }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ place | title }}</h5>
+                            <p class="card-text"></p>
+                            <a href="{% url 'activity' borough activity %}" class="btn btn-primary">{{ activity }}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+{% for activity in activities %}
+        <br><a href="{% url 'activity' borough activity %} ">
             {{ activity|title }}
         </a>
     {% endfor %}
-{% endblock %}
