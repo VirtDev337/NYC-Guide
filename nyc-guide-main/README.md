@@ -1,35 +1,92 @@
-# New York City Guide - Django Project
 
-## To start building the project:
+# New York City Guide - JTC App Project 2
+***
+New York City Guide is a travel website built within Django, a Python web framework, that displays static content from the five NYC burroughs and various tourist activities and venues people can see and/or do if they visit the Big Apple.
+***
 
-### 1. Create a virtual environment
+## Table of Contents
+- Developers
+- Installation/Technology Requirements
+    - Python ver. 3.9.7 or later
+    - Django
+- Usage
+    - Create and Run Virtual Environment
+    - Install Django and Create 'requirements.txt' file
+    - Run the New York City Guide website in the virtual environment
+- Bonus Features
+    - Implementation of cards to link activty and venue
+- License
+- Links
+***
+## Developers
+- Lee Harvey
+ Git Hub: https://github.com/VirtDev337
+- Rakesh Perani 
+  Git Hub: https://github.com/RakeshPerani
 
-At the root folder of the repository run:
+***
+## Installation/Technology Requirements
+New York City Guide requires [Python](https://www.python.org/) v3.9+  and [Django](https://www.djangoproject.com/) to run.
+***
+
+## Usage
+- To run New York City Guide, you will have to create a directory where you will run a virtual environment. The files for running the virtual environment will be saved in this directory:
 ```
-python3 -m venv venv
+mkdir <name-of-your-directory>
+cd <name-of-your-directory>
 ```
-Make sure to call your virtual environment "venv"
 
-### 2. Run virtual environment
-#### On Windows:
+Inside `<name-of-your-directory>` run the following:
+```
+python -m venv django-env
+```
+
+Now, run the virtual environment:
+
+##### On Windows:
 Windows Powershell users:
+
 ```
-venv\Scripts\activate.bat
+<name-of-your-directory>/Scripts/activate.bat  or  <name-of-your-directory>/Scripts/activate.ps1
 ```
-Bash users:
+##### Bash users:
 ```
-source venv/Scripts/activate
+source <name-of-your-directory>/Scripts/activate
 ```
-#### On Unix or MacOS:
+##### On Unix or MacOS:
+
 ```
-source venv/bin/activate
+source <name-of-your-directory>/bin/activate
 ```
-### 3. Install dependencies
+
+- Install Django and create a `requirements.txt` file :
 ```
-pip install -r requirements.txt
+pip install django
 ```
-### 4. Run Django
+The requirements.txt file will specify all the installed Python packages in the environment. Let's use a pip command to generate this:
 ```
-python manage.py runserver
+pip freeze > requirements.txt
 ```
-And go to `http://localhost:8000`
+
+- Start your virtual environment and run the New York City Guide from the directory with manage.py in it:
+```
+python manage.py runserver (and follow/click on the link: http://127.0.0.1:8000/)
+```
+***
+## Bonus Features
+### Bootstrap Cards:
+The Bootstrap toolkit, a free and open-source CSS framework, was utilized for front-end development of cards to display a picture of each activity and venue.
+
+***
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+***
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+***
+Copyright (c) 10/13/2021 Rakesh Perani & Lee Harvey
+
+
+
