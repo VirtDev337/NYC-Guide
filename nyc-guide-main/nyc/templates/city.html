@@ -11,14 +11,17 @@
             <br>Check out this
             directory of activities in each borough!
         </h3>
+        <div>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </div>
         {% for borough in boroughs %}
-            <br><a href="{% url 'borough' borough %}" style="font-size: xx-large; font-weight: bold; color: black";>
+        <br><a href="{% url 'borough' borough %}" style="font-size: xx-large; font-weight: bold; color: black";>
                 {{ borough|title }}
                 </a>
         {% endfor %}
         
         <div>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br>
         </div>
         <br><br><br><a href="{% url 'about' %}" style="font-size: xx-large; font-weight: bold; color: black";>About</a>
     </div>
