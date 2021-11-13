@@ -10,5 +10,4 @@ urlpatterns = [
     path('<str:borough>', views.borough, name = 'borough'),
     path('<str:borough>/<str:activity>', views.activity, name = 'activity'),
     path('<str:borough>/<str:activity>/<str:venue>', views.venue, name = 'venue'),
-    
-] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+] + static(settings.STATIC_URL)
