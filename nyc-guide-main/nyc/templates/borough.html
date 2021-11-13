@@ -16,9 +16,7 @@
                     <div class="card" style="width: 18rem; margin: 10px;">
                         <img class="card-img-top" src="/static/images/{{ categories|keyvalue:activity }}">
                         <div class="card-body">
-                            <h5 class="card-title">{{ place | title }}</h5>
-                            <p class="card-text"></p>
-                            <a href="{% url 'activity' borough activity %}" class="btn btn-primary">{{ activity }}</a>
+                            <a href="{% url 'activity' borough activity %}" class="btn btn-primary">{{ activity|title }}</a>
                         </div>
                     </div>
                 </div>
