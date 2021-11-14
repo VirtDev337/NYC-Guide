@@ -6,20 +6,26 @@
         border: none;
     }
 </style>
-{% if borough == "brooklyn" and activity == "beaches" %}
-<style>
-    .card{
-        margin: 115px !important;
-    }
-</style>
+{% if borough == "bronx" and activity == "zoos" %}
+    <style>
+        .card{
+            margin: 350px !important;
+        }
+    </style>
+{% elif borough == "brooklyn" and activity == "beaches" %}
+    <style>
+        .card{
+            margin: 115px !important;
+        }
+    </style>
 {% elif borough == "manhattan" and activity == "food" %}
-<style>
-    .card{
-        margin: 115px !important;
-        margin-left: 10px;
-        margin-right: 200px;
-    }
-</style>
+    <style>
+        .card{
+            margin: 115px !important;
+            margin-left: auto !important;
+            margin-right: 1px;
+        }
+    </style>
 {% endif %}
 {% comment %} 
   {% if borough == "manhattan" and activity == "food" %}
