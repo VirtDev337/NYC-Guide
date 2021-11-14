@@ -24,30 +24,24 @@ def activity(request, borough, activity):
         for _activity in boroughs[borough]["activities"]:
             if _activity['name'] == activity:
                 main_activity = _activity
-
-        # print(main_activity)
-
         places = main_activity["venues"]
-
         # for itm in places:
         #     cards[itm] = boroughs[borough][activity][itm]['image']
-        print(cards)
         return render(request = request, template_name = 'activity.html', context = { 'borough': borough, 'activity': activity, 'places' : places, 'cards' : cards, "main_activity": main_activity})
 
 def venue(request, borough, activity, venue):
     if request.method == 'GET':
-
         main_activity = ''
         for _activity in boroughs[borough]["activities"]:
             if _activity['name'] == activity:
                 main_activity = _activity
-
+            print(main_activity)
         main_venue = ''
         for _venue in main_activity["venues"]:
             if _venue['name'] == venue:
                 main_venue = _venue
-
-        return render(request = request, template_name = 'venue.html', context={ 'borough': borough, 'activity': activity, 'place' : main_venue, 'venue' : venue })
+        bg = f"/static/images/{main_activity['bimage']}"
+        return render(request = request, template_name = 'venue.html', context={ 'borough': borough, 'activity': activity, 'place' : main_venue, 'venue' : venue, 'display' : bg })
 
 def about(request):
     return render(request, 'about.html')
