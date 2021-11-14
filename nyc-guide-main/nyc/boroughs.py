@@ -111,7 +111,7 @@ boroughs = {
                 'venues': [
                     {
                         'name': 'john f kennedy international airport',
-                        'image': 'https://www.gannett-cdn.com/media/2018/10/05/USATODAY/USATODAY/636743203707188080-AP-Cuomo-JFK-Airport.1.jpg?width=2560',
+                        'image': 'https://media.cntraveler.com/photos/5f4558ab42341b4d2fb705c8/16:9/w_2560%2Cc_limit/GettyImages-1212894206.jpg',
                         'description': 'John F. Kennedy International Airport is an international airport in Queens, New York, USA. It is the primary international airport serving New York City.'
                     },
                     {
@@ -120,7 +120,7 @@ boroughs = {
                         'description': 'LaGuardia Airport is an airport in Queens, New York. The airport is the third busiest airport serving New York City, and the twentieth busiest in the United States. LaGuardia Airport covers 680 acres.'
                     },
                 ],
-                "bg_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuSHxPJzhhytA0uK9eFhfbhz839vUyw7NJYg&usqp=CAU"
+                "bg_image": "https://pestleanalysis.com/wp-content/uploads/2014/12/pest-analysis-for-airline-industry.jpg"
             },
             {
                 'name': 'beaches',
@@ -143,7 +143,7 @@ boroughs = {
                 'venues': [
                     {
                         'name': 'cedar grove beach',
-                        'image': 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.rNDD033d8UYsHQ4hT4X_CgHaE8%26pid%3DApi&f=1',
+                        'image': 'https://www.nycgovparks.org/photo_gallery/full_size/22459.jpg',
                         'description': 'The city\'s newest beach is a converted oceanfront bungalow colony. This charming beach is smaller and somewhat more tranquil than its neighbors, Midland Beach and South Beach, and is popular with the area\'s families.'
                     },
                     {
@@ -153,12 +153,12 @@ boroughs = {
                     },
                     {
                         'name': 'south beach',
-                        'image': 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffastly.4sqi.net%2Fimg%2Fgeneral%2F600x600%2F5260195_A88F3HNjwBhnvEpohXpWdwWnWzU00HLeBimJQx-rNck.jpg&f=1&nofb=1',
+                        'image': 'https://www.silive.com/resizer/bGcuCyLcoZrhzvuwUn-7J-RMmP8=/700x0/smart/arc-anglerfish-arc2-prod-advancelocal.s3.amazonaws.com/public/SBV5QNBKVBGL5BNUGIBRVVBH3E.jpg',
                         'description': 'Beachgoers can sunbathe while taking in a lovely view of the Verazzano Bridge, bike through a scenic trail, jog along the boardwalk, kayak, play tennis, or fish off of the Ocean Breeze Fishing Pier, one of the city\'s most popular. A park on the beach designed especially for seniors contains chess tables, benches, and bocce courts. The beach\'s Fountain of Dolphins is a popular stop on any tour of the boardwalk.'
                     },
                     {
                         'name': 'wolfe\'s pond beach',
-                        'image': 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.bridgeandtunnelclub.com%2Fbigmap%2Fstatenisland%2Fsouthern%2Fwolfespondpark%2F06beach.jpg&f=1&nofb=1',
+                        'image': 'https://cdn.businessyab.com/assets/uploads/0e96969ecd2262075b65a8f25329654d__united_states_new_york_richmond_county_staten_island_princes_bay_wolfes_pond_beach_32023.jpg',
                         'description': 'Love the ocean but think NYC’s beaches are just too chaotic? Wolfe’s Pond Beach is the city’s best-kept secret, a small, calm, and secluded beach that’s a perfect retreat for those looking to get away from summer’s crowds.'
                     },
                 ],
