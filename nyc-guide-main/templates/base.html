@@ -4,11 +4,34 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ place | title }}</title>
+        <title>{{ place.name | title }}</title>
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <style>
+            @import url('http://fonts.cdnfonts.com/css/broadway-bt');
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap');
+            @font-face {
+                font-family: Newyorkcity;
+                src: url("{% static 'css/Newyorkcity.ttf' %}");
+            }
+            .footer-img{
+                position: absolute;
+                bottom: 0px;
+                transform: translateX(-50%);
+            }
+            .footer-img img{
+                position: relative;
+                top: -5px;
+            }
+            #bg{
+                height: 100vh;
+            }
+            body{
+                width: 100vw;
+                overflow: hidden;
+            }
+        </style>
         {% block extrastyle %}
         {% endblock extrastyle %}
-
     </head>
     <body>
         {% comment %} <div><br><br></div> {% endcomment %}

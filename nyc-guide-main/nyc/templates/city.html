@@ -2,7 +2,6 @@
 {% load static %}
     {% block extrastyle %}
             <style>
-        @import url('http://fonts.cdnfonts.com/css/broadway-bt');
             .footer-img{
                 position: absolute;
                 bottom: 0px;
@@ -12,18 +11,12 @@
                 position: relative;
                 top: -5px;
             }
-            #bg{
-                min-height: 100vh;
-            }
-            body{
-                max-width: 100vw;
-                overflow: hidden;
-            }
+
         </style>
     {% endblock %}
 {% block content %}
-    <div id='bg' style="background-image: url('{% static "images/homepage.jpeg" %}'); background-repeat: no-repeat; background-size: 100% 100%;">
-        <h1 class="txt" style="font-family: Broadway BT; font-size: 75px; color: firebrick";>New York City Guide</h1>
+    <div id='bg' style="background-image: url('{% static "images/hbackground.jpg" %}'); background-repeat: no-repeat; background-size: 100% 100%;">
+        <h1 class="txt" style="font-family: Newyorkcity; font-size: 100px; color: firebrick;">New York City Guide</h1>
         <h3 class="txt">
             Wondering about fun activities to do in the big city? 
             <br>Check out this

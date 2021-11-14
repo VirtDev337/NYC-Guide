@@ -1,20 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
-<head> 
-    {% block extrastyle %}{% endblock %}
-</head>
+{% block extrastyle %}
+  <style>
+      .card{
+          background-color: transparent !important;
+          border: none;
+          margin: 10px;
+      }
+  </style>
+  {% if borough == "bronx" %}
+    <style>
+        .stack-card{
+            flex-direction: column;
+        }
+        .card{
+            margin-left: auto !important;
+            margin-right: 130px;
+            margin-bottom: 50px;
+        }
+    </style>
+    {% elif borough == "staten island" %}
+    <style>
+        .stack-card{
+            justify-content: space-between;
+        }
+    </style>
+  {% endif %}
+{% endblock extrastyle %}
 {% block content %}
-    <h1>{{ borough | title }}</h1>
-    
+    <div id='bg' style="background-image: url({{ main_borough.bg_image }}); background-repeat: no-repeat; background-size: 100% 100%;">
+      <h1 style="font-size: 65px; color: firebrick; font-family: Broadway BT">{{ borough | title }}</h1>
     <div class="container-fluid">
-        <div class="row">
-            <img class="col" src="{% static 'images/boroughs.jpeg' %}"/>
+        <div class="row stack-card">
             {% for activity in activities %}
-                <div class="col-md">
-                    <div class="card" style="width: 18rem; margin: 10px;">
-                        <img class="card-img-top" src="/static/images/{{ categories|keyvalue:activity }}">
+                <div class="col-md space-col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ activity.bg_image }}">
+                        {% comment %} <img class="card-img-top" src="/static/images/{{ activity|keyvalue:bg_image }}"> {% endcomment %}
                         <div class="card-body">
-                            <a href="{% url 'activity' borough activity %}" class="btn btn-primary">{{ activity|title }}</a>
+                            <a href="{% url 'activity' borough activity.name %}" class="btn btn-dark" style="font-family: Broadway BT;">{{ activity.name|title }}</a>
                         </div>
                     </div>
                 </div>
