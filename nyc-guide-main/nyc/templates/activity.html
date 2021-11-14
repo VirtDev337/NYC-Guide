@@ -21,21 +21,24 @@
     }
 </style>
 {% endif %}
-{% comment %} {% if borough == "manhattan" and activity == "food" %}
-<style>
-    .stack-card{
-        flex-direction: column;
-    }
-    .card{
-        margin-left: auto !important;
-        margin-right: 50px;
-    }
-</style>
-{% endif %} {% endcomment %}
+{% comment %} 
+  {% if borough == "manhattan" and activity == "food" %}
+    <style>
+        .stack-card{
+            flex-direction: column;
+        }
+        .card{
+            margin-left: auto !important;
+            margin-right: 50px;
+        }
+    </style>
+  {% endif %} 
+{% endcomment %}
 {% endblock extrastyle %}
 {% block content %}
+
     <div id='bg' style="background-image: url({{ main_activity.bg_image }}); background-repeat: no-repeat; background-size: 100% 100%;">
-    <h1 style="font-size: 65px; color: firebrick; font-family: Broadway BT">{{ activity | title }}</h1>
+      <h1 style="font-size: 65px; color: firebrick; font-family: Broadway BT">{{ activity | title }}</h1>
     <div class="container-fluid">
         <div class="row stack-card">
             {% for place in places %}
