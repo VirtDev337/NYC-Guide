@@ -1,4 +1,4 @@
-
+![nyc-guide](NYC_Guide_Apple.jpg)
 # <div align="center">New York City Guide</div>
 ## <div align="center">JTC App Project 2</div>
 ***
