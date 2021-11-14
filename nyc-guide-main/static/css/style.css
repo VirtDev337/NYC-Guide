@@ -2,11 +2,14 @@
     background-size: 1800px 900px;
     background-repeat: no-repeat;
     background-position:center;
-    background-attachment:inherit;
+    background-attachment:fixed;
 }
 .links{
     font-size: xx-large;
 }
 .txt{
     color: black;
+}
+.light-txt{
+    color: cyan;
 }

@@ -1,29 +1,30 @@
 boroughs = {
     'brooklyn': {
-        "activities": [
+        'activities': [
             {
-                "name": "beaches",
-                "venues": [
+                'name': 'beaches',
+            'venues': [
                     {
-                        "name": 'brighton beach',
+                        'name': 'brighton beach',
                         'image': 'https://www.holidaywithpride.com/wp-content/uploads/2021/02/HOLIDAY-WITH-PRIDE-LGBT-TRAVEL-AGENT-HOLIDAYS-TO-BRIGHTON-1.jpg',
                         'description': 'Also known as "Little Odessa" due its tight-knit Russian and Eastern European communities, Brooklyn\'s Brighton Beach is a lively neighborhood with many high-rise residential buildings. Traditional ethnic restaurants and food markets line Brighton Beach Avenue. The beach and boardwalk here are more laid-back than nearby Coney Island, catering largely to locals. Splashy nightclubs attract partiers in the evenings.'
                     },
                     {
-                        "name": 'coney island',
+                        'name': 'coney island',
                         'image': 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Foffloadmedia.feverup.com%2Fsecretnyc.co%2Fwp-content%2Fuploads%2F2020%2F12%2F23234038%2FEpw-bZbW8AEXZbD-1.jpg&f=1&nofb=1',
                         'description': 'Coney Island is a residential Brooklyn neighborhood that morphs into a relaxation and entertainment destination each summer. Locals and tourists crowd its beach, the Wonder Wheel and Luna Park, an amusement park featuring the famed Cyclone roller coaster. Street performers, the Circus Sideshow and the Mermaid Parade in June lend an eccentric vibe. Nathan\'s Famous is known for its July 4th hot-dog eating contest.'
                     },
                     {
-                        "name": 'manhattan beach',
+                        'name': 'manhattan beach',
                         'image': 'https://wallpaperaccess.com/download/manhattan-beach-2666305',
                         'description': 'Manhattan Beach is a laid-back South Bay community popular with families and outdoor enthusiasts. The Strand bike path winds along the oceanfront between modern mansions and wide stretches of sand lined with volleyball courts. Low-key Manhattan Beach Pier features a quaint aquarium and views of surfers. There are several parks, and a small downtown area with boutiques, brunch cafes, pubs & creative, upscale eateries.'
                     }
-                ],
-                "bg_image": "https://wallpaperaccess.com/download/coney-island-1268068"
+                ],  
+                'bg_image': 'https://wallpaperaccess.com/download/coney-island-1268068',
+                'bimage' : 'bgbeach.jpeg'
             },
         ],
-        "bg_image": "https://media.timeout.com/images/105683556/1024/576/image.jpg"
+        'bg_image': 'https://media.timeout.com/images/105683556/1024/576/image.jpg'
     },
     'bronx': {
         "activities": [
@@ -36,7 +37,8 @@ boroughs = {
                         'description': 'Orchard Beach, Bronx\'s sole public beach, was proclaimed "The Riviera of New York" when it was created in the 1930s. The 115-acre, 1.1-mile-long beach contains a hexagonal-block promenade, a central pavilion, snack bars, food and souvenir carts, two playgrounds, two picnic areas, a large parking lot, and 26 courts for basketball, volleyball, and handball. Changing areas and showers are available.'
                     }
                 ],
-                "bg_image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F273aiv293ycr20z8q53p7o04-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2011%2F11%2Femixpix_resized.jpg&f=1&nofb=1"
+                'bg_image': 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F273aiv293ycr20z8q53p7o04-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2011%2F11%2Femixpix_resized.jpg&f=1&nofb=1',
+                'bimage' : 'bgbeach.jpeg'
             },
             {
                 'name': 'zoos',
@@ -47,7 +49,8 @@ boroughs = {
                         'description': 'The Bronx Zoo is a zoo located within Bronx Park in the Bronx, New York. It is one of the largest zoos in the United States by area, and is the largest metropolitan zoo in the United States by area, comprising 265 acres of park lands and naturalistic habitats separated by the Bronx River.'
                     }
                 ],
-                "bg_image": "https://tourscanner.com/blog/wp-content/uploads/2020/05/Bronx-Zoo-USA.jpg"
+                "bg_image": "https://tourscanner.com/blog/wp-content/uploads/2020/05/Bronx-Zoo-USA.jpg",
+                'bimage' : 'bgzoos.jpeg'
             },
         ],
         "bg_image": "https://media.timeout.com/images/103486999/1024/576/image.jpg"
@@ -73,7 +76,8 @@ boroughs = {
                         'description': 'Borscht & pierogi are menu highlights at this cheap, no-frills Ukrainian eatery open 24 hours a day.'
                     },
                 ],
-                "bg_image": "https://newyork.cbslocal.com/wp-content/uploads/sites/14578484/2016/03/molos.jpg?resize=620,482"
+                "bg_image": "https://newyork.cbslocal.com/wp-content/uploads/sites/14578484/2016/03/molos.jpg?resize=620,482",
+                'bimage' : 'bgfood.jpeg'
             },
             {
                 'name': 'parks',
@@ -99,7 +103,8 @@ boroughs = {
                         'description': 'Washington Square Park is a 9.75-acre public park in the Greenwich Village neighborhood of Lower Manhattan, New York City. One of the best known of New York City\'s public parks, it is an icon as well as a meeting place and center for cultural activity.'
                     },
                 ],
-                "bg_image": "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+                "bg_image": "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+                'bimage' : 'bgparks.jpeg'
             },
         ],
         "bg_image": "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG1hbmhhdHRhbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
@@ -120,7 +125,8 @@ boroughs = {
                         'description': 'LaGuardia Airport is an airport in Queens, New York. The airport is the third busiest airport serving New York City, and the twentieth busiest in the United States. LaGuardia Airport covers 680 acres.'
                     },
                 ],
-                "bg_image": "https://pestleanalysis.com/wp-content/uploads/2014/12/pest-analysis-for-airline-industry.jpg"
+                "bg_image": "https://pestleanalysis.com/wp-content/uploads/2014/12/pest-analysis-for-airline-industry.jpg",
+                'bimage' : 'bgairports.jpeg'
             },
             {
                 'name': 'beaches',
@@ -131,7 +137,8 @@ boroughs = {
                         'description': 'From surfers to swimmers to the Ramones, everyone wants to "hitch a ride to Rockaway Beach." Rockaway Beach is a year-round resource for residents all along the Rockaway peninsula, and it comes alive each summer with millions of visitors. Beach goers can enjoy the sand and water, the variety of concessions, and the city\'s only legal surfing beaches. Rockaway Beach is also home to a variety of playgrounds and other outdoor activities.'
                     },
                 ],
-                "bg_image": "https://static01.nyt.com/images/2020/08/02/realestate/31DOMESTIC-ROCKAWAY-slide-8AGW/31DOMESTIC-ROCKAWAY-slide-8AGW-mobileMasterAt3x.jpg"
+                "bg_image": "https://static01.nyt.com/images/2020/08/02/realestate/31DOMESTIC-ROCKAWAY-slide-8AGW/31DOMESTIC-ROCKAWAY-slide-8AGW-mobileMasterAt3x.jpg",
+                'bimage' : 'bgbeach.jpeg'
             },
         ],
         "bg_image": "https://media.istockphoto.com/photos/subway-train-approaching-elevated-subway-station-in-queens-new-york-picture-id473789992?k=20&m=473789992&s=612x612&w=0&h=rPhfjidK7-qdeIec50QGH3M13tZNaRkHqgp0hf7Dsgk="
@@ -162,7 +169,8 @@ boroughs = {
                         'description': 'Love the ocean but think NYC’s beaches are just too chaotic? Wolfe’s Pond Beach is the city’s best-kept secret, a small, calm, and secluded beach that’s a perfect retreat for those looking to get away from summer’s crowds.'
                     },
                 ],
-                "bg_image": "https://images.fineartamerica.com/images/artworkimages/medium/3/1-south-beach-verrazano-beach-staten-island-new-york-peter-bennett.jpg"
+                "bg_image": "https://images.fineartamerica.com/images/artworkimages/medium/3/1-south-beach-verrazano-beach-staten-island-new-york-peter-bennett.jpg",
+                'bimage' : 'bgbeach.jpeg'
             },
             {
                 'name': 'food',
@@ -183,7 +191,8 @@ boroughs = {
                         'description': 'A local Italian bakery serves bread, pastries & coffees, with an adjacent cucina for hot meals.'
                     },
                 ],
-                "bg_image": "https://i.ibb.co/bs7PDDy/6480426409-177e3d9240-o-0-0-0.webp"
+                "bg_image": "https://i.ibb.co/bs7PDDy/6480426409-177e3d9240-o-0-0-0.webp",
+                'bimage' : 'bgfood.jpeg'
             },
         ],
         "bg_image": "https://lp-cms-production.imgix.net/2020-11/GettyImages-550760083.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850",

@@ -2,6 +2,12 @@
 {% load static %}
 {% block extrastyle %}
     <style>
+        .bg-img{
+            background-image: url( "{{ MEDIA_URL }}{{ display }}");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
         .footer-img{
             position: absolute;
             bottom: 0px;
@@ -12,35 +18,36 @@
             top: -5px;
         }
         .card{
-            background-color: transparent !important;
+            filter: none !important;
+            background-color: rgba(0,0,0,0.5) !important;
             border: none;
             max-height: 60vh !important;
+            box-shadow: 0 10px 20px 0 rgba(0,0,0,5);
         }
         .card-img{
             height: 40vh;
-            /* width: 100%; */
         }
     </style>
 {% endblock %}
 {% block content %}
-<div id='bg' style="background-color: #e3f8ff; background-repeat: no-repeat; background-size: 100% 100%;">
-<center>
-    <h1 style="font-size: 65px; color: firebrick; font-family: Broadway BT">{{ place.name | title }}</h1>
-    <div class="container">
-        <div class="card" style="float: inline-flex;">
-            {% comment %} <img style="display: block" src="{{ place.image }}"/> {% endcomment %}
-            <div class="card-img" style="background-image: url({{ place.image }}); background-repeat: no-repeat; background-size: contain; background-position: center;">
-            </div>
-            <div class="card-body">
-                {% comment %} <h3 class="card-title">{{ place.name | title }}</h3> {% endcomment %}
-                <p class="card-text" style="font-size: 18px; font-family: 'Oswald', sans-serif; ">{{ place.description }}</p>
+<div id="bg" class="bg-img img-blur">
+    <center>
+        <h1 style="font-size: 65px; color: firebrick; font-family: Broadway BT">{{ place.name | title }}</h1>
+        <div class="container">
+            <div class="card" style="float: inline-flex";>
+                {% comment %} <img style="display: block" src="{{ place.image }}"/> {% endcomment %}
+                <div class="card-img" style="background-image: url({{ place.image }}); background-repeat: no-repeat; background-size: contain; background-position: center";>
+                </div>
+                <div class="card-body">
+                    {% comment %} <h3 class="card-title">{{ place.name | title }}</h3> {% endcomment %}
+                    <p class="card-text" style="font-size: 26px; font-family: 'Oswald', sans-serif; font-weight: bolder; color: cyan";>{{ place.description }}</p>
+                </div>
             </div>
         </div>
-    </div>
-    {% comment %} <a href="{% url 'city' %}">Home</a><br> {% endcomment %}
-    <a class="footer-img" href="{% url 'city' %}" style="font-size: xx-large; font-weight: bold; color: black;">
-        <img src="{% static 'images/home-button.png' %}" width="180px" height="180px">
-    </a>
-    <div></div>
-</center>
+        {% comment %} <a href="{% url 'city' %}">Home</a><br> {% endcomment %}
+        <a class="footer-img" href="{% url 'city' %}" style="font-size: xx-large; font-weight: bolder";>
+            <img src="{% static 'images/home-button.png' %}" width="180px" height="180px">
+        </a>
+        <div></div>
+    </center>
 {% endblock %}
