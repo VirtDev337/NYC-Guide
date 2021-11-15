@@ -1,7 +1,7 @@
 
 # New York City Guide - JTC App Project 2
 ***
-New York City Guide is a travel website built within Django, a Python web framework, that displays static content from the five NYC burroughs and various tourist activities and venues people can see and/or do if they visit the Big Apple.
+New York City Guide is a travel website built within Django, a Python web framework, and Bootstrap, a CSS Framework, that displays static content from the five NYC burroughs and various tourist activities and venues people can see and/or do if they visit the Big Apple.
 ***
 
 ## Table of Contents
@@ -75,7 +75,7 @@ python manage.py runserver (and follow/click on the link: http://127.0.0.1:8000/
 ***
 ## Bonus Features
 ### Bootstrap Cards:
-The Bootstrap toolkit, a free and open-source CSS framework, was utilized for front-end development of cards to display a picture of each activity and venue.
+The Bootstrap toolkit, a free and open-source CSS framework, was utilized for front-end development with colors, sizes, fonts and card layout styles that displayed pictures of each activity and venue.
 
 ***
 ## Contributing

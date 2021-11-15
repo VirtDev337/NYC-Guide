@@ -1,28 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block extrastyle %}
-    <style>
-        .footer-img{
-            position: absolute;
-            bottom: 0px;
-            transform: translateX(-50%);
-        }
-        .footer-img img{
-            position: relative;
-            top: -5px;
-        }  
-        </style>      
+{% block extrastyle %}      
 {% endblock %}
 {% block content %}
-    <div id='bg' style="background-image: url('https://www.travelvalley.nl/uploads/posts/list/tips-doen-new-york.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <div id='bg' style="background-image: url('https://wallpapercave.com/wp/wp3594901.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
 {% comment %} https://www.travelvalley.nl/uploads/posts/list/tips-doen-new-york.jpg {% endcomment %}
     <h1 style="font-size: 65px; color: firebrick; font-family: Oswald">About The Developers</h1>
     <br></br>
     <h3 style="font-size: 65px; color: firebrick; font-family: Oswald" ><a href=https://github.com/RakeshPerani>Rakesh Perani</a></h3>
     <h3 style="font-size: 65px; color: firebrick; font-family: Oswald"><a href=https://github.com/VirtDev337>Lee Harvey</a></h3>
     <h4 style="font-size: 65px; color: firebrick; font-family: Oswald">Django with Bootstrap</h4>
-    {% comment %} <a href="{% url 'city' %}">Home</a> {% endcomment %}
-        <a class="footer-img" href="{% url 'city' %}" style="font-size: xx-large; font-weight: bold; color: black;">
-        <img src="{% static 'images/home-button.png' %}" width="180px" height="180px">
+        <a class="footer-img" href="{% url 'city' %}"><img src="{% static 'images/home-button.png' %}" width="210px" height="210px">
     </a>
 {% endblock %}

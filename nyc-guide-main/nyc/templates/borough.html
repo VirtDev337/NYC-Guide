@@ -1,15 +1,15 @@
+<!--This is page that renders activities for each borough-->
 {% extends 'base.html' %}
 {% load static %}
 {% block extrastyle %}
 <style>
-    .card{
+    .card{  /* Removes card border and makes each cards background transparent */
         background-color: transparent !important;
         border: none;
-        margin: 10px;
         box-shadow: 0 10px 20px 0 rgba(0,0,0,0.8);
     }
 </style>
-{% if borough == "bronx" %}
+{% if borough == "bronx" %}   <!--Checks if Bronx is chosen and positions card accordingly-->
     <style>
         .stack-card{
             flex-direction: column;
@@ -20,7 +20,7 @@
             margin-bottom: 50px;
         }
     </style>
-{% elif borough == "staten island" %}
+{% elif borough == "staten island" %} <!--Checks if Staten Island is chosen and positions card accordingly-->
     <style>
         .stack-card{
             justify-content: space-between;
@@ -37,11 +37,8 @@
                 <div class="col-md space-col">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="{{ activity.bg_image }}">
-                        {% comment %} 
-                            <img class="card-img-top" src="{% static 'images/{{ activity|keyvalue:bg_image }}' %}"> 
-                        {% endcomment %}
                         <div class="card-body">
-                            <a href="{% url 'activity' borough activity.name %}" class="btn btn-dark" style="font-family: Broadway BT;">{{ activity.name|title }}</a>
+                            <a href="{% url 'activity' borough activity.name %}" class="btn btn-primary" style="font-family: Broadway BT; color:rgb(251, 255, 0)">{{ activity.name|title }}</a>
                         </div>
                     </div>
                 </div>

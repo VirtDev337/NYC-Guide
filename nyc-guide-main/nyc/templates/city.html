@@ -1,35 +1,32 @@
+<!--This is the home page with all 5 boroughs and About page links-->
 {% extends 'base.html' %}
 {% load static %}
     {% block extrastyle %}
             <style>
-            .footer-img{
-                position: absolute;
-                bottom: 0px;
-                transform: translateX(-50%);
+            .sub-headings{ /* Adds hover effect to the boroughs, code copied from https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers */
+            transition: .3s all cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+            cursor: pointer;
             }
-            .footer-img img{
-                position: relative;
-                top: -5px;
+            .sub-headings:hover{ /* Adds hover effect to the boroughs, code copied from https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers */
+            text-decoration: none;
+            text-shadow: 0 6px 10px rgba(0,0,0,.5), 0 0 6px rgba(0,0,0,.05);
+            font-size: 35px !important;
             }
-
         </style>
     {% endblock %}
 {% block content %}
     <div id='bg' style="background-image: url('{% static "images/hbackground.jpg" %}'); background-repeat: no-repeat; background-size: 100% 100%;">
-        <h1 class="txt" style="font-family: Newyorkcity; font-size: 100px; color: firebrick;">New York City Guide</h1>
-        <h3 class="txt">
+        <h1 class="txt" style="font-family: Newyorkcity; font-size: 110px; color: firebrick;">New York City Guide</h1>
+        <h3 style="font-size: 34px; color: black; font-family: Oswald">
             Wondering about fun activities to do in the big city? 
             <br>Check out this
             directory of activities in each borough!
         </h3>
         <br>
-        {% comment %} <div>
-            <br><br><br><br><br><br><br><br><br><br><br>
-        </div> {% endcomment %}
         <div class="row">
             {% for borough in boroughs %}
             <div class="col">
-                <a href="{% url 'borough' borough %}" style="font-size: xx-large; font-weight: bold; color: firebrick; font-family: Broadway BT">
+                <a href="{% url 'borough' borough %}" class="sub-headings" style="font-size: xx-large; font-weight: bold; color: firebrick; font-family: Broadway BT">
                     {{ borough|title }}
                 </a>
             </div>
@@ -40,8 +37,7 @@
             <br><br><br><br><br><br><br><br><br><br><br>
         </div>
         <br><br><br>
-        <a class="footer-img" href="{% url 'about' %}" style="font-size: xx-large; font-weight: bold; color: black";>
-            <img src="{% static 'images/nyc-apple2.png' %}" width="210px" height="210px">
+        <a class="footer-img" href="{% url 'about' %}"><img src="{% static 'images/nyc-apple2.png' %}" width="210px" height="210px">
         </a>
     </div>
 {% endblock %}

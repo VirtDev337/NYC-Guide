@@ -1,3 +1,4 @@
+<!--This the page that lists all the venues for each activiy-->
 {% extends 'base.html' %}
 {% block extrastyle %}
 <style>
@@ -7,19 +8,19 @@
         box-shadow: 0 10px 20px 0 rgba(0,0,0,0.8);
     }
 </style>
-{% if borough == "bronx" and activity == "zoos" %}
+{% if borough == "bronx" and activity == "zoos" %} <!--Checks if Bronx and Zoos are chosen and positions card accordingly-->
     <style>
         .card{
             margin: 350px !important;
         }
     </style>
-{% elif borough == "brooklyn" and activity == "beaches" %}
+{% elif borough == "brooklyn" and activity == "beaches" %}  <!--Checks if Brooklyn and Beaches are chosen and positions card accordingly-->
     <style>
         .card{
             margin: 115px !important;
         }
     </style>
-{% elif borough == "manhattan" and activity == "food" %}
+{% elif borough == "manhattan" and activity == "food" %}  <!--Checks if Manhatten and Food are chosen and positions card accordingly-->
     <style>
         .card{
             margin: 115px !important;
@@ -28,19 +29,6 @@
         }
     </style>
 {% endif %}
-{% comment %} 
-    {% if borough == "manhattan" and activity == "food" %}
-        <style>
-            .stack-card{
-                flex-direction: column;
-            }
-            .card{
-                margin-left: auto !important;
-                margin-right: 50px;
-            }
-        </style>
-    {% endif %} 
-{% endcomment %}
 {% endblock extrastyle %}
 {% block content %}
     <div id='bg' style="background-image: url({{ main_activity.bg_image }}); background-repeat: no-repeat; background-size: 100% 100%;">
@@ -52,9 +40,8 @@
                     <div class="card" style="width: 18rem; margin: 10px;">
                         <img class="card-img-top" src="{{ place.image }}">
                         <div class="card-body">
-                            {% comment %} <h5 class="card-title" style="font-family: Broadway BT">{{ place.name | title }}</h5> {% endcomment %}
                             <p class="card-text"></p>
-                            <a href="{% url 'venue' borough activity place.name %}" class="btn btn-dark" style="font-family: Broadway BT;">{{ place.name | title }}</a>
+                            <a href="{% url 'venue' borough activity place.name %}" class="btn btn-primary" style="font-family: Broadway BT;color:rgb(251, 255, 0)">{{ place.name | title }}</a>
                         </div>
                     </div>
                 </div>

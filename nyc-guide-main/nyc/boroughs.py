@@ -3,7 +3,7 @@ boroughs = {
         'activities': [
             {
                 'name': 'beaches',
-            'venues': [
+                'venues': [
                     {
                         'name': 'brighton beach',
                         'image': 'https://www.holidaywithpride.com/wp-content/uploads/2021/02/HOLIDAY-WITH-PRIDE-LGBT-TRAVEL-AGENT-HOLIDAYS-TO-BRIGHTON-1.jpg',
@@ -107,7 +107,7 @@ boroughs = {
                 'bimage' : 'bgparks.jpeg'
             },
         ],
-        "bg_image": "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG1hbmhhdHRhbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+        "bg_image": "https://wallpaperbat.com/img/400773-awesome-manhattan-skyline-new-york-city-4k-wallpaper-skyline.jpg"
     },
     'queens': {
         "activities": [

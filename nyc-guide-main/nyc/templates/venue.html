@@ -1,30 +1,22 @@
+<!--This page renders the detail information of a specific venue-->
 {% extends 'base.html' %}
 {% load static %}
 {% block extrastyle %}
     <style>
-        .bg-img{
+        .bg-img{ /* styles the background images for specific venue */
             background-image: url( "{{ MEDIA_URL }}{{ display }}");
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-attachment: fixed;
         }
-        .footer-img{
-            position: absolute;
-            bottom: 0px;
-            transform: translateX(-50%);
-        }
-        .footer-img img{
-            position: relative;
-            top: -5px;
-        }
-        .card{
+        .card{  /* Adds card styling to the venue details and venue image */
             filter: none !important;
-            background-color: rgba(0,0,0,0.5) !important;
+            background-color: rgba(0,0,0,0.2) !important;
             border: none;
             max-height: 60vh !important;
             box-shadow: 0 10px 20px 0 rgba(0,0,0,5);
         }
-        .card-img{
+        .card-img{  /* Sets the heigh of the card image */
             height: 40vh;
         }
     </style>
@@ -35,18 +27,15 @@
         <h1 style="font-size: 65px; color: firebrick; font-family: Broadway BT">{{ place.name | title }}</h1>
         <div class="container">
             <div class="card" style="float: inline-flex";>
-                {% comment %} <img style="display: block" src="{{ place.image }}"/> {% endcomment %}
                 <div class="card-img" style="background-image: url({{ place.image }}); background-repeat: no-repeat; background-size: contain; background-position: center";>
                 </div>
                 <div class="card-body">
-                    {% comment %} <h3 class="card-title">{{ place.name | title }}</h3> {% endcomment %}
-                    <p class="card-text" style="font-size: 26px; font-family: 'Oswald', sans-serif; font-weight: bolder; color: cyan";>{{ place.description }}</p>
+                    <p class="card-text" style="font-size: 26px; font-family: 'Oswald', sans-serif; font-weight: bolder; color:rgb(251, 255, 0)";>{{ place.description }}</p>
                 </div>
             </div>
         </div>
-        {% comment %} <a href="{% url 'city' %}">Home</a><br> {% endcomment %}
         <a class="footer-img" href="{% url 'city' %}" style="font-size: xx-large; font-weight: bolder";>
-            <img src="{% static 'images/home-button.png' %}" width="180px" height="180px">
+            <img src="{% static 'images/home-button.png' %}" width="210px" height="210px">
         </a>
         <div></div>
     </center>

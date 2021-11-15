@@ -1,3 +1,4 @@
+<!--Base template with CSS for all html files in this app. It adds global styles to every template.-->
 <!DOCTYPE html>
 {% load static %}
 <html>
@@ -7,27 +8,43 @@
         <title>NYC Guide</title>
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <style>
-            @import url('http://fonts.cdnfonts.com/css/broadway-bt');
-            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap');
+            @import url('http://fonts.cdnfonts.com/css/broadway-bt'); /* Imports Font for Boroughs, Activity, Venue */
+            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap'); /* Imports Font for Venue and About page text */
             @font-face {
-                font-family: Newyorkcity;
+                font-family: Newyorkcity; /* Imports Font For Home Page Title */
                 src: url("{% static 'css/Newyorkcity.ttf' %}");
             }
-            .footer-img{
+            .footer-img{   /* Postions About Apple Button at the bottom of page */
                 position: absolute;
                 bottom: 0px;
                 transform: translateX(-50%);
             }
-            .footer-img img{
-                position: relative;
-                top: -5px;
+           .footer-img img{  /* Adds transition effect to About Apple image */
+            position: relative;
+            top: -5px;
+            transition: .2s all;
+            cursor: pointer;
             }
-            #bg{
+            .footer-img img:hover{  /* Whenever someone hovers over About Apple button, it increase size */
+            transform: scale(1.05);
+            }
+            #bg{  /* this sets the background image height to 100 view height */
                 height: 100vh;
             }
-            body{
+            body{  /* sets the html body width to 100% view width and any overflows will be hidden */
                 width: 100vw;
                 overflow: hidden;
+            }
+            .card{  /* Adds hover effect to the cards, code copied from https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers */
+                border-radius: 4px;
+                background: #fff;
+                box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+                transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+                cursor: pointer;
+            }
+            .card:hover{  /* Adds hover effect to the cards, code copied from https://www.ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers */
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
             }
         </style>
         {% block extrastyle %}
