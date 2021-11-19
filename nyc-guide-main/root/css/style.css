@@ -1,10 +1,15 @@
-.nav.nav-center {
-    display: inline-block;
-    float: none;
+#bg{
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment:fixed;
 }
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
+.links{
+    font-size: xx-large;
+}
+.txt{
+    color: black;
+}
+.light-txt{
+    color: cyan;
 }
