@@ -35,7 +35,6 @@ def venue(request, borough, activity, venue):
         for _activity in boroughs[borough]["activities"]:
             if _activity['name'] == activity:
                 main_activity = _activity
-            print(main_activity)
         main_venue = ''
         for _venue in main_activity["venues"]:
             if _venue['name'] == venue:
